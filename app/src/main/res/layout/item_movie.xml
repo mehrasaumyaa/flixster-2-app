@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -15,12 +16,11 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
-        android:contentDescription="@string/movie-poster"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="284dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="127dp"
         android:layout_marginLeft="127dp"
@@ -28,22 +28,21 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
-        android:contentDescription="@string/movietitle"
         android:textSize="24sp"
         tools:text="Wonder Woman" />
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="169dp"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvtitle"
         android:layout_alignEnd="@+id/tvtitle"
         android:layout_alignRight="@+id/tvtitle"
         android:layout_alignBottom="@+id/tvtitle"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="7dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="-91dp"
         android:layout_toEndOf="@+id/ivPoster"

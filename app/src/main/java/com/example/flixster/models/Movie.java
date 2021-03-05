@@ -3,15 +3,22 @@ package com.example.flixster.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class Movie {
     String posterPath;
     String overview;
     String title;
+    double rating;
+    int movieID;
 
+    //empty constructor needed by the Parceler library
+    public Movie(){
+    }
     /*exception is thrown in case the given strings are not present
     whoever is calling this method is responsible for dealing with the exception, unlike try/catch
     where we deal with the exception on the go */
@@ -19,6 +26,8 @@ public class Movie {
         posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
+        rating = jsonObject.getDouble("vote_average");
+        movieID = jsonObject.getInt("id");
     }
 
     //iterating JSONArray and creating a Movie for each element
@@ -42,5 +51,13 @@ public class Movie {
 
     public String getTitle() {
         return title;
+    }
+
+    public double getRating(){
+        return rating;
+    }
+
+    public int getMovieID(){
+        return movieID;
     }
 }
